@@ -5,8 +5,8 @@ TinyVSU is a tiny vector speed up library, which use AVX SIMD instruction set to
 Make sure you have installed cmake!<br>
 Run the following command to run tests.
 ```
-cmake -S . -B build
-```
-```
-cmake --build build
+>>> cmake -S . -B build
+>>> cmake --build build
+>>> cd build/test
+>>> ./test
 ```
