@@ -1,8 +1,12 @@
 cmake_minimum_required(VERSION 3.8 FATAL_ERROR)
 project(TinyVSU LANGUAGES CXX CUDA)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+find_package(CUDA  REQUIRED)
+include_directories("${CUDA_INCLUDE_DIRS}")
+
 # 检查编译器是否支持 AVX
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-mavx" COMPILER_SUPPORTS_AVX)

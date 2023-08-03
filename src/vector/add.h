@@ -1,25 +1,28 @@
 #pragma once
 #include <vector>
-#include "../kernels/vectorAddKernel.h"
+#include "../kernels/vectorAddKernel.cuh"
 #include "../simd/vectorAdd.h"
 #include <iostream>
 
-namespace vc
+namespace vsu
 {
-    template<typename T, bool useGPU = false>
+    enum class speedUpMethod
+    {
+        SIMD,
+        GPU
+    };
+    
+    template<typename T, speedUpMethod method = speedUpMethod::SIMD>
     std::vector<T> vcAdd(std::vector<T> x, std::vector<T> y)
     {
         std::vector<T> z;
-        // z.reserve(x.size());
-        if (useGPU)
+        if constexpr(method == speedUpMethod::GPU)
         {
-            std::cout << "开始使用GPU加速计算" << std::endl;
-            z = vectorAddGPU(x, y);
+            z = kernel::vectorAdd(x, y);
         }
-        else
+        else if constexpr (method == speedUpMethod::SIMD)
         {
-            std::cout << "开始使用SIMD指令加速计算" << std::endl;
-            z = vectorAdd(x, y);
+            z = simd::vectorAdd(x, y);
         }
         return z;
     }

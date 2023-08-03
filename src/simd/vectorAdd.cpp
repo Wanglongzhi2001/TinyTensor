@@ -26,7 +26,8 @@ void AddImpl(const double* x, const double* y, double* z, int N)
   }
 }
 
-std::vector<double> vectorAdd(std::vector<double> x, std::vector<double> y)
+
+std::vector<double> simd::vectorAdd(std::vector<double> x, std::vector<double> y)
 {
   std::vector<double> z(x.size());
   AddImpl(x.data(), y.data(), z.data(), x.size());
