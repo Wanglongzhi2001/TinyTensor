@@ -38,6 +38,14 @@ TEST(vectorAddSIMDTest, doubleTest){
     ASSERT_EQ(z, gt);
 }
 
+TEST(vectorAddSIMDTest, floatTest){
+    std::vector<float> x{1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0};
+    std::vector<float> y{4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0};
+    std::vector<float> gt{5.0,7.0,9.0,11.0,13.0,15.0,17.0,19.0};
+    std::vector<float> z = vsu::vcAdd<float, speedUpMethod::SIMD>(x, y);
+    ASSERT_EQ(z, gt);
+}
+
 int main(int argc, char **argv)
 {
   ::testing::InitGoogleTest(&argc, argv);

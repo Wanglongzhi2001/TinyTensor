@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
-#include "../kernels/vectorAddKernel.cuh"
-#include "../simd/vectorAdd.h"
+#include "../kernels/add/vectorAddKernel.cuh"
+#include "../simd/add/vectorAdd.h"
 #include <iostream>
 
 namespace vsu
@@ -20,7 +20,7 @@ namespace vsu
         {
             z = kernel::vectorAdd(x, y);
         }
-        else if constexpr (method == speedUpMethod::SIMD)
+        else if constexpr(method == speedUpMethod::SIMD)
         {
             z = simd::vectorAdd(x, y);
         }
