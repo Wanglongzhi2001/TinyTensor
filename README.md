@@ -12,7 +12,7 @@ Run the following command to run tests.
 ```
 
 ## Run benchmark
-After build the project, run the following command to run benchmark.
+After building the project, run the following command to run benchmark.
 ```
 >>> cd build/benchmark/kernels
 >>> ./runBenchMark 
