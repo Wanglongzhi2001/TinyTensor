@@ -10,3 +10,10 @@ Run the following command to run tests.
 >>> cd build/test
 >>> ./test
 ```
+
+## Run benchmark
+After build the project, run the following command to run benchmark.
+```
+>>> cd build/benchmark/kernels
+>>> ./runBenchMark 
+```
