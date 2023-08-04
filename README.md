@@ -14,6 +14,11 @@ Run the following command to run tests.
 ## Run benchmark
 After building the project, run the following command to run benchmark.
 ```
+// run CUDA kernel benchmark
 >>> cd build/benchmark/kernels
->>> ./runBenchMark 
+>>> ./runBenchMarkCUDA
+
+// run simd benchmark
+>>> cd build/benchmark/simd
+>>> ./runBenchMarkSIMD
 ```
