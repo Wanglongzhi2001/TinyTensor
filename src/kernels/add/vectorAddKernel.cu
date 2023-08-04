@@ -27,8 +27,6 @@
         return res; \
     }   \
 
-
-
 REGISTER_CUDA_VECTORADD_CALLER(int)
 REGISTER_CUDA_VECTORADD_CALLER(float)
 REGISTER_CUDA_VECTORADD_CALLER(double)
