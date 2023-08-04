@@ -1,0 +1,3 @@
+
+add_executable(runBenchMarkSIMD runBenchMark.cpp)
+target_link_libraries(runBenchMarkSIMD vectorAdd)
