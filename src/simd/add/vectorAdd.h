@@ -3,7 +3,7 @@
 
 namespace simd
 {
-    std::vector<double> vectorAdd(std::vector<double> x, std::vector<double> y);
+    std::vector<double> vectorAdd(const std::vector<double>& x, const std::vector<double>& y);
 
-    std::vector<float> vectorAdd(std::vector<float> x, std::vector<float> y);
+    std::vector<float> vectorAdd(const std::vector<float>& x, const std::vector<float>& y);
 }

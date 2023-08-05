@@ -25,7 +25,7 @@ namespace kernel
     REGISTER_CUDA_VECTORADDCALLER_HEAD(double)
 
     template<typename T>
-    std::vector<T> vectorAdd(std::vector<T> v_x, std::vector<T> v_y)
+    std::vector<T> vectorAdd(const std::vector<T>& v_x, const std::vector<T>& v_y)
     {
         return vectorAddGPUCaller(v_x, v_y);
     }

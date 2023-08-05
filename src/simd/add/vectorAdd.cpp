@@ -55,14 +55,14 @@ void AddImpl(const float* x, const float* y, float* z, size_t N)
 }
 
 
-std::vector<double> simd::vectorAdd(std::vector<double> x, std::vector<double> y)
+std::vector<double> simd::vectorAdd(const std::vector<double>& x, const std::vector<double>& y)
 {
   std::vector<double> z(x.size());
   AddImpl(x.data(), y.data(), z.data(), x.size());
   return z;
 }
 
-std::vector<float> simd::vectorAdd(std::vector<float> x, std::vector<float> y)
+std::vector<float> simd::vectorAdd(const std::vector<float>& x, const std::vector<float>& y)
 {
   std::vector<float> z(x.size());
   AddImpl(x.data(), y.data(), z.data(), x.size());
