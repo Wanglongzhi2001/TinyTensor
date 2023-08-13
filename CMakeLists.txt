@@ -20,7 +20,7 @@ endif()
 
 add_subdirectory(src/vector)
 add_subdirectory(src/kernels/add)
-add_subdirectory(src/simd/add)
+add_subdirectory(src/simd)
 add_subdirectory(third_party/googletest)
 add_subdirectory(test)
 add_subdirectory(benchmark)

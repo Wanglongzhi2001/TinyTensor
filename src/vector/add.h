@@ -4,7 +4,7 @@
 #include "../simd/add/vectorAdd.h"
 #include <iostream>
 
-namespace vsu
+namespace tinyvsu
 {
     enum class speedUpMethod
     {
