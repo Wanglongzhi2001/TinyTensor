@@ -1,3 +1,0 @@
-
-add_executable(runBenchMarkCUDA runBenchMark.cu)
-target_link_libraries(runBenchMarkCUDA vectorAddKernel cublas)

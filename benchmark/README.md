@@ -1,3 +1,0 @@
-## SIMD benchmark
-
-## CUDA benchmark
