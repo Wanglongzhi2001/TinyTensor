@@ -150,9 +150,7 @@ namespace TT {
 
         }
         
-        // TODO
-        // Tensor<DeviceType> operator[](std::initializer_list)
-
+        // Tensor operator[](std::initializer_list) const;
 
         bool empty() const {return m_storage.get()->empty();}
         LengthType ndim() const { return m_shape.size(); }
