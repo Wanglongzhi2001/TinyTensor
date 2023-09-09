@@ -1,24 +1,10 @@
 ## What is TinyVSU
 TinyVSU is a tiny vector speed up library, which use AVX SIMD instruction set to speed up vector computation on CPU and use CUDA to speed up on GPU.
 
-## Run tests
-Make sure you have installed cmake!<br>
-Run the following command to run tests.
+## Build from source
 ```
+// clone third_party module
+>>> git submodule update --init --recursive
 >>> cmake -S . -B build
 >>> cmake --build build
->>> cd build/test
->>> ./test
-```
-
-## Run benchmark
-After building the project, run the following command to run benchmark.
-```
-// run CUDA kernel benchmark
->>> cd build/benchmark/kernels
->>> ./runBenchMarkCUDA
-
-// run simd benchmark
->>> cd build/benchmark/simd
->>> ./runBenchMarkSIMD
 ```
