@@ -1,4 +1,12 @@
+#pragma once
 
+namespace TT {
+enum class DType {
+    Float32,
+    Float16,
+    Int32,
+    Int16
+};
 
 class dt_byte {
     unsigned char _;
@@ -16,3 +24,4 @@ public:
         return reinterpret_cast<const T*>(this);
     }
 };
+} // namespace TT
